@@ -1,0 +1,111 @@
+Exercicio A:
+# A. multstring
+# seja uma string s e um inteiro positivo n
+# retorna uma string com n cópias da string original
+# multstring('Hi', 2) -> 'HiHi'
+def multstring(s, n):
+    res = ""
+    for i in range(0, n):
+        res += s
+    return res
+
+
+Exercicio B:
+# B. string_splosion
+# string_splosion('Code') -> 'CCoCodCode'
+# string_splosion('abc') -> 'aababc'
+# string_splosion('ab') -> 'aab'
+def string_splosion(s):
+    res = ""
+    for i in range(1, len(s)+1):
+        res += s[0:i]
+    return res
+
+
+Exercicio C:
+# C. array_count9
+# conta quantas vezes aparece o 9 numa lista nums
+def array_count9(nums):
+    cnt = 0
+    for n in nums:
+        if n == 9:
+            cnt += 1
+    return cnt
+
+
+Exercicio D:
+# D. array_front9
+# verifica se pelo menos um dos quatro primeiros é nove
+# array_front9([1, 2, 9, 3, 4]) -> True
+# array_front9([1, 2, 3, 4, 9]) -> False
+# array_front9([1, 2, 3, 4, 5]) -> False
+def array_front9(nums):
+    for i in range(0, min(4, len(nums))):
+        if nums[i] == 9:
+            return True
+    return False
+
+
+Exercicio E:
+# E. hello_name
+# seja uma string name
+# hello_name('Bob') -> 'Hello Bob!'
+# hello_name('Alice') -> 'Hello Alice!'
+# hello_name('X') -> 'Hello X!'
+def hello_name(name):
+    return f"Hello {name}!"
+
+
+Exercicio F:
+# F. make_tags
+# make_tags('i', 'Yay'), '<i>Yay</i>'
+# make_tags('i', 'Hello'), '<i>Hello</i>'
+# make_tags('cite', 'Yay'), '<cite>Yay</cite>'
+def make_tags(tab, word):
+    return f"<{tab}>{word}</{tab}>"
+
+
+Exercicio G:
+# G. extra_end
+# seja um string s com no mínimo duas letras
+# retorna três vezes as duas últimas letras
+# extra_end('Hello'), 'lololo'
+# extra_end('ab'), 'ababab'
+# extra_end('Hi'), 'HiHiHi'  
+def extra_end(s):
+    res = ""
+    for i in range(0, 3):
+        res += s[-2:]
+    return res
+
+
+Exercicio H:
+# H. first_half
+# seja uma string s
+# retorna a primeira metade da string
+# first_half('WooHoo') -> 'Woo'
+# first_half('HelloThere') -> 'Hello'
+# first_half('abcdef') -> 'abc'
+def first_half(s):
+    return s[0:int(len(s)/2)]
+
+
+Exercicio I:
+# I. sem_pontas
+# seja uma string s de pelo menos dois caracteres
+# retorna uma string sem o primeiro e último caracter
+# without_end('Hello') -> 'ell'
+# without_end('python') -> 'ytho'
+# without_end('coding') -> 'odin'
+def sem_pontas(s):
+    return s[1:-1]
+
+
+Exercicio J:
+# J. roda2
+# rodar uma string s duas posições
+# a string possui pelo menos 2 caracteres
+# left2('Hello') -> 'lloHe'
+# left2('Hi') -> 'Hi'
+def roda2(s):
+    return f"{s[2:]}{s[0:2]}"

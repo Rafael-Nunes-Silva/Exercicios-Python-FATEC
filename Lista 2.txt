@@ -1,0 +1,71 @@
+Exercicio 1:
+a = float(input("Insira o tamanho do lado A: "))
+b = float(input("Insira o tamanho do lado B: "))
+c = float(input("Insira o tamanho do lado C: "))
+
+if a > abs(b-c) or b > abs(a-c) or c > abs(a-b): # a <= b+c and b <= a+c and c <= a+b:
+    tri = "!!!ERRO!!!"
+    if a == b == c:
+        tri = "equilátero"
+    elif a != b != c:
+        tri = "escaleno"
+    elif (a == b and b != c) or (a != b and b == c) or (a == c and a != b):
+        tri = "isóceles"
+    print(f"Esse é um triângulo {tri}")
+else:
+    print(f"Não é posivel montar um triângulo de lados {a}, {b}, {c}")
+
+
+Exercicio 2:
+ano = int(input("Insira o ano: "))
+
+if ano % 4 == 0 and (ano % 100 != 0 or ano % 400 != 0):
+    print(f"{ano} é um ano bissexto")
+else:
+    print(f"{ano} não é um ano bissexto")
+
+
+Exercicio 3:
+kgPescado = int(input("Insira a quantidade de peixes pescados em kilo: "))
+
+if kgPescado > 50:
+    print(f"Haverá uma multa de {4*(kgPescado-50)} reais")
+else:
+    print("Não haverá multa")
+
+
+Exercicio 4:
+a = float(input("Insira o primeiro número: "))
+b = float(input("Insira o segundo número: "))
+c = float(input("Insira o terceiro número: "))
+
+print(f"O maior número é {max(a, b, c)}")
+
+
+Exercicio 5:
+a = float(input("Insira o primeiro número: "))
+b = float(input("Insira o segundo número: "))
+c = float(input("Insira o terceiro número: "))
+
+print(f"O maior número é {max(a, b, c)} e o menor é {min(a, b, c)}")
+
+
+Exercicio 6:
+salarioBruto = float(input("Insira o seu salário por hora trabalhada: ")) * float(input("Insira a quantidade de horas trabalhadas: "))
+
+print(f"O salário bruto é de {salarioBruto} reais")
+print(f"O valor do Imposto de Renda é de {salarioBruto*0.11} reais")
+print(f"O valor INSS é de {salarioBruto*0.08} reais")
+print(f"O valor do imposto relativo ao Sindicato é de {salarioBruto*0.05} reais")
+print(f"O salário liquido é de {salarioBruto*0.76} reais")
+
+
+Exercicio 7:
+areaPintada = float(input("Informe o tamanho da área a ser pintada (m²): "))
+
+latas = int(areaPintada/54)
+
+if areaPintada % 54 > 0:
+    latas += 1
+
+print(f"Serão necessárias {latas} latas de tinta que custarão {latas * 80} reais")

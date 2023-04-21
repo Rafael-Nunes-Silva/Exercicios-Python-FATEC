@@ -1,0 +1,68 @@
+Exercicio 1:
+num1 = int(input("Insira o primeiro número: "))
+num2 = int(input("Insira o segundo número: "))
+print("A soma dos dois números é ", num1 + num2)
+
+
+Exercicio 2:
+metros = float(input("Insira o valor em métros: "))
+print("Esse valor em milímetros é ", metros*1000)
+
+
+Exercicio 3:
+dias = float(input("Insira a quantidade de dias: "))
+horas = float(input("Insira a quantidade de horas: "))
+minutos = float(input("Insira a quantidade de minutos: "))
+segundos = float(input("Insira a quantidade de segundos: "))
+
+print("O total de segundos contidos em ", dias, "dias, ", horas, "horas, ", minutos, "minutos e ", segundos, "segundos é ", dias*86400 + horas*3600 + minutos*60 + segundos)
+
+
+Exercicio 4:
+salario = float(input("Insira o valor atual do salário: "))
+aumento = float(input("Insira o valor percentual do aumento: "))
+
+print("O novo salário será de R$", salario*(1+aumento/100))
+
+
+Exercicio 5:
+valor = float(input("Insira o preço da mercadoria: "))
+desconto = float(input("Insira o valor percentual de desconto: "))
+
+print("O valor com o desconto é ", valor * (1 - desconto/100))
+
+
+Exercicio 6:
+dist = float(input("Insira a distância em kilometros a ser percorrida: "))
+vel = float(input("Insira em Km/h a velocidade média do veículo: "))
+
+print("O tempo necessário para a viagem é de ", dist / vel, "horas")
+
+
+Exercicio 7:
+temp = float(input("Insira a temperatura em graus Celsius: "))
+
+print("Essa temperatura é equivalente a ", temp*9/5 + 32, "graus Fahrenheit")
+
+
+Exercicio 8:
+temp = float(input("Insira a temperatura em graus Fahrenheit: "))
+
+print("Essa temperatura é equivalente a ", (5*temp-32*5)/9, "graus Celsius")
+
+
+Exercicio 9:
+diasAlugado = float(input("Insira a quantidade de dias que o carro permaneceu alugado: "))
+kmPercorrido = float(input("Insira a quantidade de kilômetros percorridos: "))
+print("O valor a ser pago é de ", diasAlugado*60 + kmPercorrido*0.15, "reais.")
+
+
+Exercicio 10:
+cigarros = float(input("Insira a quantidade de cigarros fumados por dia: "))
+anos = float(input("Insira por quantos anos fumou cigarros: "))
+
+print(cigarros*anos*356/144, "dias de vida foram perdidos")
+
+
+Exercicio 11:
+print("2 elevado a 1 milhão tem", len(str(2**1000000)), " digitos")
