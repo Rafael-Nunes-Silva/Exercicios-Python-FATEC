@@ -15,4 +15,5 @@ Exercícios de Python da aula de Algoritmos e Lógica de Programação
   <li><a href="https://github.com/Rafael-Nunes-Silva/Exercicios-Python-FATEC/tree/main/Lista%209">Lista 9</a></li>
   <li><a href="https://github.com/Rafael-Nunes-Silva/Exercicios-Python-FATEC/tree/main/Lista%2010">Lista 10</a></li>
   <li><a href="https://github.com/Rafael-Nunes-Silva/Exercicios-Python-FATEC/tree/main/Lista%2011">Lista 11</a></li>
+  <li><a href="https://github.com/Rafael-Nunes-Silva/Exercicios-Python-FATEC/tree/main/Lista%2012">Lista 12</a></li>
 </ul>
