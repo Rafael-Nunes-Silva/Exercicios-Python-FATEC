@@ -140,10 +140,10 @@ def test(obtido, esperado):
         prefixo = ' Parabéns!'
     else:
         prefixo = ' Ainda não'
-    print ('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
+    print('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
 
 def main():
-    print ('First_last6')
+    print('First_last6')
     test(first_last6([1, 2, 6]), True)
     test(first_last6([6, 1, 2, 3]), True)
     test(first_last6([3, 2, 1]), False)
@@ -152,8 +152,8 @@ def main():
     test(first_last6([6]), True)
     test(first_last6([3]), False)
 
-    print ()
-    print ('Same_first_last')
+    print()
+    print('Same_first_last')
     test(same_first_last([1, 2, 3]), False)
     test(same_first_last([1, 2, 3, 1]), True)
     test(same_first_last([1, 2, 1]), True)
@@ -161,16 +161,16 @@ def main():
     test(same_first_last([]), False)
     test(same_first_last([7, 7]), True)
 
-    print ()
-    print ('Common_end')
+    print()
+    print('Common_end')
     test(common_end([1, 2, 3], [7, 3]), True)
     test(common_end([1, 2, 3], [7, 3, 2]), False)
     test(common_end([1, 2, 3], [1, 3]), True)
     test(common_end([1, 2, 3], [1]), True)
     test(common_end([1, 2, 3], [2]), False)
 
-    print ()
-    print ('Maior_ponta')
+    print()
+    print('Maior_ponta')
     test(maior_ponta([1, 2, 3]), [3, 3, 3])
     test(maior_ponta([11, 5, 9]), [11, 11, 11])
     test(maior_ponta([2, 11, 3]), [3, 3, 3])
@@ -180,8 +180,8 @@ def main():
     test(maior_ponta([2, 11, 2]), [2, 2, 2])
     test(maior_ponta([0, 0, 1]), [1, 1, 1])
     
-    print ()
-    print ('sum2')
+    print()
+    print('sum2')
     test(sum2([1, 2, 3]), 3)
     test(sum2([1, 1]), 2)
     test(sum2([1, 1, 1, 1]), 2)
@@ -191,8 +191,8 @@ def main():
     test(sum2([4, 5, 6]), 9)
     test(sum2([4]), 4)
 
-    print ()
-    print ('middle_way')
+    print()
+    print('middle_way')
     test(middle_way([1, 2, 3], [4, 5, 6]), [2, 5])
     test(middle_way([7, 7, 7], [3, 8, 0]), [7, 8])
     test(middle_way([5, 2, 9], [1, 4, 5]), [2, 4])
@@ -200,8 +200,8 @@ def main():
     test(middle_way([1, 2, 3], [3, 1, 4]), [2, 1])
     test(middle_way([1, 2, 3], [4, 1, 1]), [2, 1])
              
-    print ()
-    print ('date fashion')
+    print()
+    print('date fashion')
     test(date_fashion(5, 10), 2)
     test(date_fashion(5, 2), 0)
     test(date_fashion(5, 5), 1)
@@ -215,8 +215,8 @@ def main():
     test(date_fashion(2, 7), 0)
     test(date_fashion(6, 2), 0)
 
-    print ()
-    print ('squirrel_play')
+    print()
+    print('squirrel_play')
     test(squirrel_play(70, False), True)
     test(squirrel_play(95, False), False)
     test(squirrel_play(95, True), True)
@@ -231,8 +231,8 @@ def main():
     test(squirrel_play(59, True), False)	
     test(squirrel_play(60, False), True)
 
-    print ()
-    print ('Pego correndo')
+    print()
+    print('Pego correndo')
     test(pego_correndo(60, False), 0)
     test(pego_correndo(65, False), 1)
     test(pego_correndo(65, True), 0)
@@ -246,8 +246,8 @@ def main():
     test(pego_correndo(40, True), 0)
     test(pego_correndo(90, False), 2)
 
-    print ()
-    print ('Alarm Clock')
+    print()
+    print('Alarm Clock')
     test(alarm_clock(1, False), '7:00')
     test(alarm_clock(5, False), '7:00')
     test(alarm_clock(0, False), '10:00')

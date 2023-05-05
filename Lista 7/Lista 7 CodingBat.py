@@ -102,11 +102,11 @@ def test(obtido, esperado):
     prefixo = ' Parabéns!'
   else:
     prefixo = ' Ainda não'
-  print ('%s obtido: %s esperado: %s'
+  print('%s obtido: %s esperado: %s'
          % (prefixo, repr(obtido), repr(esperado)))
 
 def main():
-  print ('Multstring')
+  print('Multstring')
   test(multstring('Hi', 2), 'HiHi')
   test(multstring('Hi', 3), 'HiHiHi')
   test(multstring('Hi', 1), 'Hi')
@@ -118,8 +118,8 @@ def main():
   test(multstring('code', 2), 'codecode')
   test(multstring('code', 3), 'codecodecode')
 
-  print ()
-  print ('String Explosion')
+  print()
+  print('String Explosion')
   test(string_splosion('Code'), 'CCoCodCode')
   test(string_splosion('abc'), 'aababc')
   test(string_splosion('ab'), 'aab')
@@ -131,8 +131,8 @@ def main():
   test(string_splosion('Good'), 'GGoGooGood')
   test(string_splosion('Bad'), 'BBaBad')
 
-  print ()
-  print ('Array count 9')
+  print()
+  print('Array count 9')
   test(array_count9([1, 99, 9]), 1)
   test(array_count9([1, 9, 9]), 2)
   test(array_count9([1, 9, 9, 3, 9]), 3)
@@ -141,8 +141,8 @@ def main():
   test(array_count9([4, 2, 4, 3, 1]), 0)
   test(array_count9([9, 2, 99, 3, 1]), 1)
   
-  print ()
-  print ('Array front 9')
+  print()
+  print('Array front 9')
   test(array_front9([1, 2, 9, 3, 4]), True)
   test(array_front9([1, 2, 3, 4, 9]), False)
   test(array_front9([1, 2, 3, 4, 5]), False)
@@ -156,15 +156,15 @@ def main():
   test(array_front9([]), False)
   test(array_front9([3, 9, 2, 3, 3]), True)
 
-  print ()
-  print ('Hello Name')
+  print()
+  print('Hello Name')
   test(hello_name('Bob'), 'Hello Bob!')
   test(hello_name('Alice'), 'Hello Alice!')
   test(hello_name('X'), 'Hello X!')
   test(hello_name('Hello'), 'Hello Hello!')
 
-  print ()
-  print ('Make Tags')
+  print()
+  print('Make Tags')
   test(make_tags('i', 'Yay'), '<i>Yay</i>')
   test(make_tags('i', 'Hello'), '<i>Hello</i>')
   test(make_tags('cite', 'Yay'), '<cite>Yay</cite>')
@@ -173,16 +173,16 @@ def main():
   test(make_tags('i', 'i'), '<i>i</i>')
   test(make_tags('i', ''), '<i></i>')
 
-  print ()
-  print ('Extra End')
+  print()
+  print('Extra End')
   test(extra_end('Hello'), 'lololo')
   test(extra_end('ab'), 'ababab')
   test(extra_end('Hi'), 'HiHiHi')
   test(extra_end('Candy'), 'dydydy')
   test(extra_end('Code'), 'dedede')
 
-  print ()
-  print ('First Half')
+  print()
+  print('First Half')
   test(first_half('WooHoo'), 'Woo')
   test(first_half('HelloThere'), 'Hello')
   test(first_half('abcdef'), 'abc')
@@ -191,8 +191,8 @@ def main():
   test(first_half('0123456789'), '01234')
   test(first_half('kitten'), 'kit')
 
-  print ()
-  print ('Sem Pontas')
+  print()
+  print('Sem Pontas')
   test(sem_pontas('Hello'), 'ell')
   test(sem_pontas('Python'), 'ytho')
   test(sem_pontas('coding'), 'odin')
@@ -202,8 +202,8 @@ def main():
   test(sem_pontas('kitten'), 'itte')
   test(sem_pontas('woohoo'), 'ooho')
 
-  print ()
-  print ('Roda 2')
+  print()
+  print('Roda 2')
   test(roda2('Hello'), 'lloHe')
   test(roda2('python'), 'thonpy')
   test(roda2('Hi'), 'Hi')

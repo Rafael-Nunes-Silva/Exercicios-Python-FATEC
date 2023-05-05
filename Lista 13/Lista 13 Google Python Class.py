@@ -50,16 +50,16 @@ def test(obtido, esperado):
         prefixo = ' Parabéns!'
     else:
         prefixo = ' Ainda não'
-    print ('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
+    print('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
 
 def main():
-    print ('fim_igual')
+    print('fim_igual')
     test(fim_igual(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
     test(fim_igual(['', 'x', 'xy', 'xyx', 'xx']), 2)
     test(fim_igual(['aaa', 'be', 'abc', 'hello']), 1)
 
-    print ()
-    print ('x_antes')
+    print()
+    print('x_antes')
     test(x_antes(['bbb', 'ccc', 'axx', 'xzz', 'xaa']),
              ['xaa', 'xzz', 'axx', 'bbb', 'ccc'])
     test(x_antes(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']),
@@ -68,8 +68,8 @@ def main():
              ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
 
              
-    print ()
-    print ('sort_last')
+    print()
+    print('sort_last')
     test(sort_last([(1, 3), (3, 2), (2, 1)]),
              [(2, 1), (3, 2), (1, 3)])
     test(sort_last([(2, 3), (1, 2), (3, 1)]),

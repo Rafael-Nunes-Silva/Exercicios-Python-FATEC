@@ -82,33 +82,33 @@ def test(obtido, esperado):
         prefixo = ' Parabéns!'
     else:
         prefixo = ' Ainda não'
-    print ('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
+    print('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
 
 def main():
-    print ('remove_iguais')
+    print('remove_iguais')
     test(remove_iguais([2, 2, 1, 3]), [1, 2, 3])
     test(remove_iguais([2, 2, 3, 2, 3]), [2, 3])
     test(remove_iguais([]), [])
 
-    print ()
-    print ('cripto')
+    print()
+    print('cripto')
     test(cripto('ana e mariana gostam de banana'),
              'an e aimnr agmost de abn')
     test(cripto('Batatinha quando nasce esparrama pelo chão'),
              'Bahint adnoqu acens aemprs elop choã')
 
-    print ()
-    print ('derivada de polinômio')
+    print()
+    print('derivada de polinômio')
     test(derivada([3, 0, 4, 3, 5]), [0, 8, 9, 20])
     test(derivada([4, 16, 1]), [16, 2])
 
-    print ()
-    print ('soma em listas invertidas')
+    print()
+    print('soma em listas invertidas')
     test(soma([5, 2, 3, 4], [9, 8, 7, 8]), [4, 1, 1, 3, 1])
     test(soma([3, 1, 5], [5, 9, 2]), [8, 0, 8])
 
-    print ()
-    print ('anagrama')
+    print()
+    print('anagrama')
     test(anagrama('sim', 'siiimmmmm'), False)
     test(anagrama('iracema', 'america'), True)
     test(anagrama('ator', 'rota'), True)

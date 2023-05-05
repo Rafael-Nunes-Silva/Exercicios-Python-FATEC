@@ -186,10 +186,10 @@ def test(obtido, esperado):
         prefixo = ' Parabéns!'
     else:
         prefixo = ' Ainda não'
-    print ('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
+    print('%s obtido: %s esperado: %s' % (prefixo, repr(obtido), repr(esperado)))
 
 def main():
-    print ('Near_ten')
+    print('Near_ten')
     test(near_ten(12), True)
     test(near_ten(17), False)
     test(near_ten(19), True)
@@ -206,8 +206,8 @@ def main():
     test(near_ten(3), False)
     test(near_ten(1), True)
 
-    print ()
-    print ('Lone Sum')
+    print()
+    print('Lone Sum')
     test(lone_sum(1, 2, 3), 6)
     test(lone_sum(3, 2, 3), 2)
     test(lone_sum(3, 3, 3), 0)
@@ -218,8 +218,8 @@ def main():
     test(lone_sum(4, 2, 3), 9)
     test(lone_sum(1, 3, 1), 3)
 
-    print ()
-    print ('Lucky_sum')
+    print()
+    print('Lucky_sum')
     test(lucky_sum(1, 2, 3), 6)
     test(lucky_sum(1, 2, 13), 3)
     test(lucky_sum(1, 13, 3), 1)
@@ -233,8 +233,8 @@ def main():
     test(lucky_sum(7, 2, 1), 10)
     test(lucky_sum(3, 3, 13), 6)
 
-    print ()
-    print ('Double_char')
+    print()
+    print('Double_char')
     test(double_char('The'), 'TThhee')
     test(double_char('AAbb'), 'AAAAbbbb')
     test(double_char('Hi-There'), 'HHii--TThheerree')
@@ -245,8 +245,8 @@ def main():
     test(double_char('.'), '..')
     test(double_char('aa'), 'aaaa')
 
-    print ()
-    print ('Count_hi')
+    print()
+    print('Count_hi')
     test(count_hi('abc hi ho'), 1)
     test(count_hi('ABChi hi'), 2)
     test(count_hi('hihi'), 2)
@@ -257,8 +257,8 @@ def main():
     test(count_hi('Hi is no HI on ahI'), 0)
     test(count_hi('hiho not HOHIhi'), 2)
 
-    print ()
-    print ('Cat_dog')
+    print()
+    print('Cat_dog')
     test(cat_dog('catdog'), True)
     test(cat_dog('catcat'), False)
     test(cat_dog('1cat1cadodog'), True)
@@ -273,8 +273,8 @@ def main():
     test(cat_dog('c'), True)
     test(cat_dog(''), True)
 
-    print ()
-    print ('Count_code')
+    print()
+    print('Count_code')
     test(count_code('aaacodebbb'), 1)
     test(count_code('codexxcode'), 2)
     test(count_code('cozexxcope'), 2)
@@ -290,8 +290,8 @@ def main():
     test(count_code('AAcodeBBcoleCCccorfDD'), 2)
     test(count_code('coAcodeBcoleccoreDD'), 3)
 
-    print ()
-    print ('End_other')
+    print()
+    print('End_other')
     test(end_other('Hiabc', 'abc'), True)
     test(end_other('AbC', 'HiaBc'), True)
     test(end_other('abc', 'abXabc'), True)
@@ -307,8 +307,8 @@ def main():
     test(end_other('ab', 'ab12'), False)
     test(end_other('ab', '12ab'), True)
 
-    print ()
-    print ('Count_evens')
+    print()
+    print('Count_evens')
     test(count_evens([2, 1, 2, 3, 4]), 3)
     test(count_evens([2, 2, 0]), 3)
     test(count_evens([1, 3, 5]), 0)
@@ -318,8 +318,8 @@ def main():
     test(count_evens([2]), 1)
     test(count_evens([2, 5, 12]), 2)
 
-    print ()
-    print ('Sum13')
+    print()
+    print('Sum13')
     test(sum13([1, 2, 2, 1]), 6)
     test(sum13([1, 1]), 2)
     test(sum13([1, 2, 2, 1, 13]), 6)
@@ -335,8 +335,8 @@ def main():
     test(sum13([0]), 0)
     test(sum13([13, 0]), 0)
 
-    print ()
-    print ('Has22')
+    print()
+    print('Has22')
     test(has22([1, 2, 2]), True)
     test(has22([1, 2, 1, 2]), False)
     test(has22([2, 1, 2]), False)
@@ -352,8 +352,8 @@ def main():
     test(has22([3, 3, 2, 2]), True)
     test(has22([5, 2, 5, 2]), False)
 
-    print ()
-    print ('Soma na lista')
+    print()
+    print('Soma na lista')
     test(soma_na_lista(5, [1, 2, 3, 4]), True)
     test(soma_na_lista(9, [1, 2, 3, 4]), False)
     test(soma_na_lista(0, [1, 2, 3, 4]), False)
@@ -362,8 +362,8 @@ def main():
     test(soma_na_lista(4, [2, 2, 1, 3]), True)
     test(soma_na_lista(42, [40, 2, 3, 39]), True)
 
-    print ()
-    print ('Fila de Tijolos')
+    print()
+    print('Fila de Tijolos')
     test(fila_tijolos(3, 1, 8), True)
     test(fila_tijolos(3, 1, 9), False)
     test(fila_tijolos(3, 2, 10), True)
