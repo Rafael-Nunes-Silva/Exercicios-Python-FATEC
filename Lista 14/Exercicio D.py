@@ -1,8 +1,7 @@
-# G. verbing
-# Dada uma string, caso seu comprimento seja pelo menos 3,
-# adiciona 'ing' no final
-# Caso a string já termine em 'ing', acrescentará 'ly'.
-def verbing(s):
-    if len(s) < 3:
-        return s
-    return s + ("ly" if s[-3:] == "ing" else "ing")
+# D. Dada uma lista de números retorna uma lista sem os elementos repetidos
+def remove_iguais(nums):
+    ret = []
+    for n in nums:
+        if n not in ret:
+            ret.append(n)
+    return sorted(ret)

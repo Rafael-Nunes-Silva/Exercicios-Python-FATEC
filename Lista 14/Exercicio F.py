@@ -1,10 +1,10 @@
-# I. inicio_final
-# Divida cada string em dois pedaços.
-# Se a string tiver um número ímpar de caracteres
-# o primeiro pedaço terá um caracter a mais,
-# Exemplo: 'abcde', divide-se em 'abc' e 'de'.
-# Dadas 2 strings, a e b, retorna a string
-# a_inicio + b_inicio + a_final + b_final
-import math
-def inicio_final(a, b):
-    return a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
+# F. Derivada de um polinômio
+# Os coeficientes de um polinômio estão numa lista na ordem do seu grau.
+# Você deverá devolver uma lista com os coeficientes da derivada.
+# Exemplo: [3, 2, 5, 2] retorna [2, 10, 6]
+# A derivada de 3 + 2x + 5x^2 + 2x^3 é 2 + 10x + 6x^2
+def derivada(coef):
+    deriv = []
+    for i in range(1, len(coef)):
+        deriv.append(int(coef[i]) * i)
+    return deriv

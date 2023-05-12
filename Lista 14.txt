@@ -1,55 +1,63 @@
-Exercicio D:
-# G. verbing
-# Dada uma string, caso seu comprimento seja pelo menos 3,
-# adiciona 'ing' no final
-# Caso a string já termine em 'ing', acrescentará 'ly'.
-def verbing(s):
-    if len(s) < 3:
-        return s
-    return s + ("ly" if s[-3:] == "ing" else "ing")
+# D. Dada uma lista de números retorna uma lista sem os elementos repetidos
+def remove_iguais(nums):
+    ret = []
+    for n in nums:
+        if n not in ret:
+            ret.append(n)
+    return sorted(ret)
 
-Exercicio E:
-# H. not_bad
-# Dada uma string, procura a primeira ocorrência de 'not' e 'bad'
-# Se 'bad' aparece depois de 'not' troca 'not' ... 'bad' por 'good'
-# Assim 'This dinner is not that bad!' retorna 'This dinner is good!'
-def not_bad(s):
-    notPos = s.find("not")
-    badPos = s.find("bad")
-    if badPos > notPos:
-        return s[:notPos] + "good" + s[badPos+3:]
-    return s
+# E. Cripto desafio!!
+# Dada uma frase, você deve retirar todas as letras repetidas das palavras
+# e ordenar as letras que sobraram
+# Exemplo: 'ana e mariana gostam de banana' vira 'an e aimnr agmost de abn'
+# Dicas: tente transformar cada palavra em um conjunto,
+# depois tente ordenar as letras e montar uma string com o resultado.
+# Utilize listas auxiliares se facilitar
+def cripto(frase):
+    novaFrase = []
+    for palavra in frase.split(" "):
+        novaPalavra = ""
+        for letra in palavra:
+            if letra not in novaPalavra:
+                novaPalavra += letra
+        novaFrase.append("".join(sorted(novaPalavra)))
+    return " ".join(novaFrase)
 
-Exercicio F:
-# I. inicio_final
-# Divida cada string em dois pedaços.
-# Se a string tiver um número ímpar de caracteres
-# o primeiro pedaço terá um caracter a mais,
-# Exemplo: 'abcde', divide-se em 'abc' e 'de'.
-# Dadas 2 strings, a e b, retorna a string
-# a_inicio + b_inicio + a_final + b_final
-import math
-def inicio_final(a, b):
-    return a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
+# F. Derivada de um polinômio
+# Os coeficientes de um polinômio estão numa lista na ordem do seu grau.
+# Você deverá devolver uma lista com os coeficientes da derivada.
+# Exemplo: [3, 2, 5, 2] retorna [2, 10, 6]
+# A derivada de 3 + 2x + 5x^2 + 2x^3 é 2 + 10x + 6x^2
+def derivada(coef):
+    deriv = []
+    for i in range(1, len(coef)):
+        deriv.append(int(coef[i]) * i)
+    return deriv
 
-Exercicio G:
-# J. zeros finais
-# Verifique quantos zeros há no final de um número inteiro positivo
-# Exemplo: 10010 tem 1 zero no fim e 908007000 possui três
-def zf(n):
-    n = str(n)
-    i = len(n)-1
-    while n[i] == '0':
-        i -= 1
-    return len(n)-1-i
 
-Exercicio H:
-# K. conta 2
-# Verifique quantas vezes o dígito 2 aparece entre 0 e n-1
-# Exemplo: para n = 20 o dígito 2 aparece duas vezes entre 0 e 19
-def conta2(n):
-    count = 0
-    for i in range(0, n):
-        count += str(i).count("2")
-    return count
+# G. Soma em listas invertidas
+# Colocamos os dígitos de dois números em listas ao contrário
+# 513 vira [3, 1, 5] e 295 vira [5, 9, 2]
+# [3, 1, 5] + [5, 9, 2] = [8, 0, 8]
+# pode supor que n1 e n2 tem o mesmo número de dígitos
+# Não vale converter a lista em número para somar diretamente
+def soma(n1, n2):
+    soma = []
+    for i in range(0, len(n1)):
+        soma.append(int(n1[i]) + int(n2[i]))
+    for i in range(0, len(soma)):
+        if soma[i] >= 10:
+            soma[i] -= 10
+            if i == len(soma)-1:
+                soma.append(1)
+            else: soma[i+1] += 1
+    return soma
 
+# H. Anagrama
+# Verifique se duas palavras são anagramas,
+# isto é são uma é permutação das letras da outra
+# anagrama('aberto', 'rebato') = True
+# anagrama('amor', 'ramo') = True
+# anagrama('aba', 'baba') = False
+def anagrama(s1, s2):
+    return sorted(s1) == sorted(s2)
